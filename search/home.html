@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCB 服务板块重设计</title>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 FontAwesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind 配置，使用 Inter 字体 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 antialiased">
+
+    <!-- Service Section Start - 响应式卡片布局 -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+
+        <!-- 标题区域 -->
+        <div class="text-center mb-12 md:mb-16">
+            <p class="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-2">我们的核心优势</p>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                全方位 PCB 制造与组装服务
+            </h2>
+            <div class="w-20 h-1 bg-emerald-500 mx-auto rounded-full mt-4"></div>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                从原型设计到大规模量产，我们提供高品质、低成本、高效率的一站式解决方案。
+            </p>
+        </div>
+
+        <!-- 卡片网格容器：在小屏幕上垂直堆叠，中等屏幕三列并排 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-10">
+
+            <!-- Card 1: PCB Fabrication (PCB 制造) -->
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden flex flex-col group">
+                <!-- 图片区域 -->
+                <div class="h-48 overflow-hidden relative">
+                    <!-- Image of a green PCB board. -->
+                    <img src="https://images.unsplash.com/photo-1622675537223-2f061749e308?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PCB Fabrication" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <!-- 内容区域 -->
+                <div class="p-6 md:p-8 flex-1 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mr-4 shadow-inner">
+                            <i class="fa-solid fa-layer-group text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">PCB 制造</h3>
+                    </div>
+                    <p class="text-gray-600 text-base leading-relaxed mb-5">
+                        采用先进设备，专注于复杂和高精度电路板的制造，确保产品可靠性。
+                    </p>
+                    <!-- 列表化卖点 -->
+                    <ul class="text-sm text-gray-500 space-y-3 mb-8 flex-1">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3 text-lg"></i> 
+                            <span class="text-gray-700">HDI & 激光微孔板 (Laser Microvias)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3 text-lg"></i> 
+                            <span class="text-gray-700">刚柔结合板 (Rigid-Flex) 及射频板 (RF Boards)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3 text-lg"></i> 
+                            <span class="text-gray-700">高达 30 盎司的重铜板制造能力</span>
+                        </li>
+                    </ul>
+                    <!-- CTA 按钮 -->
+                    <a href="#" class="mt-auto bg-emerald-600 text-white py-3 px-6 rounded-lg text-center font-semibold hover:bg-emerald-700 transition-colors shadow-md hover:shadow-lg">
+                        查看制造详情
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: PCB Assembly (PCB 组装) -->
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden flex flex-col group">
+                <!-- 图片区域 -->
+                <div class="h-48 overflow-hidden relative">
+                    <!-- Image of a robotic arm placing a chip on a PCB. -->
+                    <img src="https://images.unsplash.com/photo-1580668406835-6057d524b737?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PCB Assembly" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <!-- 内容区域 -->
+                <div class="p-6 md:p-8 flex-1 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mr-4 shadow-inner">
+                            <i class="fa-solid fa-robot text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">PCB 组装</h3>
+                    </div>
+                    <p class="text-gray-600 text-base leading-relaxed mb-5">
+                        提供完整的 PCB 组装服务，从物料采购到成品交付，高效、高质量。
+                    </p>
+                    <!-- 列表化卖点 -->
+                    <ul class="text-sm text-gray-500 space-y-3 mb-8 flex-1">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3 text-lg"></i> 
+                            <span class="text-gray-700">一站式交钥匙服务 (Turnkey Service)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3 text-lg"></i> 
+                            <span class="text-gray-700">SMT 贴片及通孔元件组装 (THT)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3 text-lg"></i> 
+                            <span class="text-gray-700">功能测试、烧录及最终检验</span>
+                        </li>
+                    </ul>
+                    <!-- CTA 按钮 -->
+                    <a href="#" class="mt-auto bg-emerald-600 text-white py-3 px-6 rounded-lg text-center font-semibold hover:bg-emerald-700 transition-colors shadow-md hover:shadow-lg">
+                        了解组装流程
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: Electronic Components Sourcing (电子元件采购) -->
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 overflow-hidden flex flex-col group">
+                <!-- 图片区域 -->
+                <div class="h-48 overflow-hidden relative">
+                    <!-- Image of various electronic components. -->
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Components Sourcing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <!-- 内容区域 -->
+                <div class="p-6 md:p-8 flex-1 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mr-4 shadow-inner">
+                            <i class="fa-solid fa-search-dollar text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">电子元件采购</h3>
+                    </div>
+                    <p class="text-gray-600 text-base leading-relaxed mb-5">
+                        凭借十多年的经验，我们确保所有采购元件都是原装正品，来源可靠。
+                    </p>
+                    <!-- 列表化卖点 -->
+                    <ul class="text-sm text-gray-500 space-y-3 mb-8 flex-1">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3 text-lg"></i> 
+                            <span class="text-gray-700">保证 100% 原装和全新元件</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3 text-lg"></i> 
+                            <span class="text-gray-700">全球供应商网络，确保稳定供应</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-emerald-500 mt-1 mr-3 text-lg"></i> 
+                            <span class="text-gray-700">专业的 BOM 分析和成本优化</span>
+                        </li>
+                    </ul>
+                    <!-- CTA 按钮 -->
+                    <a href="#" class="mt-auto bg-gray-200 text-gray-700 py-3 px-6 rounded-lg text-center font-semibold hover:bg-gray-300 transition-colors shadow-md hover:shadow-lg">
+                        获取元件报价
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Service Section End -->
+
+</body>
+</html>
